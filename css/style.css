@@ -1,0 +1,75 @@
+:root {
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.2;
+    background-color: darkgrey;
+}
+
+*,
+::before,
+::after{
+    /* 全局修改盒模型为border-box */
+    box-sizing: inherit;
+}
+
+.box {
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+body header {
+    background-color: blue;
+    font-size: 2rem;
+    color: cornsilk;
+}
+/* 猫头鹰选择器 */
+body * + * {
+    margin-top: 1.5em;
+}
+
+.content{
+    display:flex;
+    /* 负外边距为了抵消border-spacing对水平方向的作用 */
+    /* margin: 1em -1.5em 1em -1.5em; */
+    margin-top: 1em;
+    /* border-spacing: 1.5em 0; */
+}
+
+.content .box {
+    background-color:white;
+    /* display:table-cell; */
+}
+
+.main_area {
+    width: 75%;
+    /* float: left; */
+}
+
+.content img {
+    float: left;
+    margin: 1em;
+}
+.right_area {
+    width: 25%;
+    margin-left: 1.5em;
+    margin-top: 0;
+    /* min-height: 100vh; */
+}
+
+.button {
+    background-color: blue;
+    font-size: 1rem;
+    padding: 0.5em 0;
+    color: white;
+    text-align: center;
+}
+
+.alpha_button {
+    color: blue;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.article {
+    font-size: 1.2rem;
+}

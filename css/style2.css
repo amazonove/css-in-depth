@@ -1,0 +1,29 @@
+:root {
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.2;
+    background-color: darkgrey;
+}
+
+*,
+::before,
+::after{
+    /* 全局修改盒模型为border-box */
+    box-sizing: inherit;
+}
+
+* + * {
+    margin-top: 1.5em;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: dodgerblue;
+    color: ghostwhite;
+    padding: 1em;
+    border-radius: 0.5em;
+}

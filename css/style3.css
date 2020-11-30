@@ -1,0 +1,79 @@
+:root {
+    box-sizing: border-box;
+    line-height: 1.2;
+    background-color: darkgrey;
+}
+
+*,
+::before,
+::after{
+    /* 使用继承修改盒模型默认值为border-box */
+    box-sizing: inherit;
+}
+
+/* 猫头鹰选择器 */
+* + * {
+    margin-top: 1.5em;
+}
+
+/* 双容器模式 */
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    background-color: goldenrod;
+    padding: 1em;
+}
+
+/* 清除浮动 */
+.site-nav::after{
+    display: block;
+    content: ' ';
+    clear: both;
+}
+
+.site-nav {
+    list-style: none;
+    background-color: red;
+    padding: 0.5em;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: hotpink;
+}
+
+.site-nav li {
+    float: left;
+    margin-left: 2em;
+    margin-top: 0;
+    background-color:green;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+}
+
+.site-nav :first-child{
+    margin-left: 0;
+}
+
+.site-nav li.nav-right {
+    float: right;
+}
+
+.flex {
+    display: flex;
+}
+
+.column-main {
+    background-color: silver;
+    max-width: 70%;
+    min-height: 800px;
+    padding: 0 1em;
+}
+
+.column-sidebar {
+    background-color: silver;
+    margin-left: 2em;
+    margin-top: 0;
+    padding: 0 1em;
+    height: fit-content;
+}
